@@ -1,6 +1,6 @@
 # Documento de Arquitetura Web (WAD)
 
-## Sistema de Check-in Automático - Inteli
+## EventSync | Sistema de Gerenciamento de eventos
 
 ## Introdução
 
