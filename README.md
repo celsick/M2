@@ -54,11 +54,11 @@ O sistema utiliza um banco de dados relacional com as seguintes entidades princi
 - **Events**: Contém os dados dos eventos, como título, descrição, data, local e capacidade
 - **Subscriptions**: Registra as inscrições dos usuários nos eventos, com status e data de inscrição
 
-O diagrama do banco de dados está disponível em <a href="./assets/modelo_relacional.png">`assets/banco-checkin.pdf`</a>.<br>
+O diagrama do banco de dados está disponível em <a href="./assets/modelo_relacional.png">`assets/modelo_relacional`</a>.<br>
 
 <img src="./assets/modelo_relacional.png">
 
-O SQL se encontra NA PASTA DB
+O SQL se encontra em "./migrations/fisico.sql".
 
 ## Como Executar o Projeto Localmente
 
