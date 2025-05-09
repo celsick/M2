@@ -25,7 +25,7 @@ A plataforma gerencia todas as etapas do ciclo de um evento: desde a sua cria√ß√
 
 ## Diagrama do Banco de Dados
 
-![Diagrama do Banco de Dados](../assets/modelo-checkin.svg)
+![Diagrama do Banco de Dados](../assets/modelo_relacional.png)
 
 ### Entidades Principais
 
