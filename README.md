@@ -74,7 +74,7 @@ O SQL se encontra NA PASTA DB
 
 ```bash
 git clone hgit@github.com:celsick/M2.git
-cd inteli-assignments/Projectdb
+cd M2
 ```
 
 2. Instale as dependências:
