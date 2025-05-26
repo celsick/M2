@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+require("dotenv").config();
+const PORT = process.env.PORT || 3000;
 
 // Middleware para processar JSON
 app.use(express.json());
 
 // Rotas
-const routes = require('./routes/frontRoutes.js');
+const routes = require('./routes/index');
 app.use('/', routes);
 
 // Inicializa o servidor

@@ -1,25 +1,22 @@
 {
-  "name": "m2",
+  "name": "projectdb1",
   "version": "1.0.0",
-  "description": "A EventSync é uma aplicação web desenvolvida para facilitar o cadastro de eventos e o gerenciamento de inscrições de participantes. Usuários podem visualizar eventos disponíveis, realizar inscrições e acompanhar seu status. O sistema também permite o gerenciamento dos eventos por parte de administradores.",
-  "main": "runMigration.js",
+  "main": "jest.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/celsick/M2.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/celsick/M2/issues"
-  },
-  "homepage": "https://github.com/celsick/M2#readme",
+  "description": "",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
   }
 }
