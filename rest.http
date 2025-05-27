@@ -1,1 +1,24 @@
-GET http://localhost:3000/
+### Buscar
+GET http://localhost:3000/users
+
+### Buscar por ID
+GET http://localhost:3000/users/1
+
+### Criar
+POST http://localhost:3000/users
+Content-Type: application/json
+{
+  "nome": "M1",
+  "localizacao": "Segundo andar",
+  "capacidade": "20"
+}
+### Atualizar
+PUT http://localhost:3000/users/1
+Content-Type: application/json
+{
+  "nome": "A2",
+  "localizacao": "Primeiro andar",
+  "capacidade": "5"
+}
+### Deletar 
+DELETE http://localhost:3000/users/1
