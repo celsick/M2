@@ -1,36 +1,24 @@
 const db = require('../config/database');
 
-class Event {
-  static async getAll() {
-    const result = await db.query('SELECT * FROM events');
-    return result.rows;
-  }
+const EventsModel = {
+  async getAll() {
+    const res = await db.query('SELECT * FROM events');
+    return res.rows;
+  },
 
-  static async getById(id) {
-    const result = await db.query('SELECT * FROM events WHERE id_events = $1', [id]);
-    return result.rows[0];
-  }
+  async getById(eventId) {
+    const res = await db.query('SELECT * FROM events WHERE event_id = $1', [eventId]);
+    return res.rows[0];
+  },
 
-  static async create(data) {
-    const result = await db.query(
-      'INSERT INTO events (nome, email) VALUES ($1, $2) RETURNING *',
-      [data.nome, data.email]
+  async create({ titulo, descricao, data, horario, local, capacidade }) {
+    const res = await db.query(
+      `INSERT INTO events (titulo, descricao, data, horario, local, capacidade)
+       VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
+      [titulo, descricao, data, horario, local, capacidade]
     );
-    return result.rows[0];
+    return res.rows[0];
   }
-  
-  static async update(id, data) {
-    const result = await db.query(
-      'UPDATE events SET nome = $1, email = $2 WHERE id_events = $3 RETURNING *',
-      [data.nome, data.email, id]
-    );
-    return result.rows[0];
-  }
-  
-  static async delete(id) {
-    const result = await db.query('DELETE FROM events WHERE id_events = $1 RETURNING *', [id]);
-    return result.rowCount > 0;
-  }
-}
+};
 
-module.exports = Event;
+module.exports = EventsModel;
